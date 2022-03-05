@@ -1,4 +1,4 @@
-package com.fumito.scrapboxwrapper
+package com.fumito.scrapboxwrapper.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
