@@ -6,11 +6,14 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
+import com.google.accompanist.insets.statusBarsPadding
 
 @Composable
 fun WebViewWidget() {
     AndroidView(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .statusBarsPadding(),
         factory = { WebView(it) },
         update = { webView ->
             webView.webViewClient = WebViewClient()
