@@ -1,5 +1,6 @@
 package com.fumito.scrapboxwrapper.ui.home
 
+import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.viewinterop.AndroidView
 import android.webkit.WebView
@@ -31,12 +32,16 @@ fun WebViewWidget() {
             }
         },
         update = { webView ->
+            Log.d("@@@@@@@ updated/ back pressed value", "${backPressed.value}")
+
             if (backPressed.value) {
                 backPressed.value = false
                 if (webView.canGoBack()) {
+                    Log.d("@@@@@@@ goBack", "")
                     webView.goBack()
                 } else {
                     // close app
+                    Log.d("@@@@@@@ close app", "")
                 }
             }
         }
