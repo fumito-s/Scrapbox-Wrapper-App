@@ -12,7 +12,8 @@ import com.fumito.scrapboxwrapper.ui.home.WebViewWidget
 fun ScrapboxWrapperNavGraph(
     modifier: Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ScrapboxWrapperDestinations.HOME_ROUTE
+    startDestination: String = ScrapboxWrapperDestinations.HOME_ROUTE,
+    onExitApp: () -> Unit
 ) {
     NavHost(
         modifier = modifier,
@@ -20,7 +21,7 @@ fun ScrapboxWrapperNavGraph(
         startDestination = startDestination
     ) {
         composable(ScrapboxWrapperDestinations.HOME_ROUTE) {
-            WebViewWidget()
+            WebViewWidget(onExitApp)
         }
     }
 }

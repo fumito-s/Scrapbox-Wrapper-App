@@ -9,7 +9,9 @@ import com.fumito.scrapboxwrapper.ui.theme.ScrapboxWrapperTheme
 import com.google.accompanist.insets.ProvideWindowInsets
 
 @Composable
-fun ScrapboxWrapperApp() {
+fun ScrapboxWrapperApp(
+    onExitApp: () -> Unit
+) {
     ScrapboxWrapperTheme() {
         ProvideWindowInsets {
 
@@ -20,7 +22,8 @@ fun ScrapboxWrapperApp() {
 
             ScrapboxWrapperNavGraph(
                 navController = navController,
-                modifier = Modifier
+                modifier = Modifier,
+                onExitApp = onExitApp
             )
         }
     }
