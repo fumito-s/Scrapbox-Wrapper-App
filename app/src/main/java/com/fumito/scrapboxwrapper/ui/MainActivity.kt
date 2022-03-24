@@ -10,7 +10,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
-            ScrapboxWrapperApp()
+            ScrapboxWrapperApp { exitApp() }
         }
+    }
+
+    private fun exitApp() {
+        this.finish()
     }
 }
