@@ -6,6 +6,10 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.FloatingActionButton
+import androidx.compose.material.Icon
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -49,4 +53,11 @@ fun WebViewWidget(
         enabled = true,
         onBack = { backPressed.value = true }
     )
+}
+
+@Composable
+fun ImeFab() {
+    FloatingActionButton(onClick = { /*do something*/ }) {
+        Icon(Icons.Filled.Edit, contentDescription = "edit")
+    }
 }
