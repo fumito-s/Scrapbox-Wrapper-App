@@ -6,7 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.fumito.scrapboxwrapper.ui.home.WebViewWidget
+import com.fumito.scrapboxwrapper.ui.home.HomeScreen
 
 @Composable
 fun ScrapboxWrapperNavGraph(
@@ -21,7 +21,7 @@ fun ScrapboxWrapperNavGraph(
         startDestination = startDestination
     ) {
         composable(ScrapboxWrapperDestinations.HOME_ROUTE) {
-            WebViewWidget(onExitApp)
+            HomeScreen(onExitApp)
         }
     }
 }
